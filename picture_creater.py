@@ -1,5 +1,6 @@
 from pathlib import Path
 from PIL import Image, ImageStat
+import math
 
 TILE_SIZE = (10, 10)
 IMAGE = input('Input way to main picture: \n')
@@ -44,4 +45,5 @@ for x in range(0, WIDTH, TILE_SIZE[0]):
         mosaic.paste(im=tile, box=box)
 
 mosaic.save('result.jpg')
+
 mosaic.show()
