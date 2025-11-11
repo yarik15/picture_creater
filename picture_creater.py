@@ -18,7 +18,7 @@ class TileSizeConstant:
 base_image: Optional[ImageFile] = None
 flag: bool = False
 while flag == False:
-    base_image_path : str = 'картинка.jpg' #Input path to picture: \n
+    base_image_path : str = input('Input path to picture: \n')
     if os.path.exists(base_image_path):
         flag = True
     else: print('Wrong path')
@@ -38,7 +38,7 @@ except ValueError:
 folder: Optional[Path] = None
 flag: bool = False
 while flag == False:
-    images_for_pixels_path: str = '../Изображения' #Input path to folder with tiles: \n
+    images_for_pixels_path: str = input('Input path to folder with tiles: \n')
     if os.path.exists(images_for_pixels_path):
         flag = True
     else:
@@ -107,3 +107,4 @@ result : str = input('Input the name of mosaic: \n')
 mosaic.save(f'{result}.jpg')
 print(f'Mosaic saved as "{result}.jpg"')
 mosaic.show()
+
